@@ -3,7 +3,6 @@ import './ListPage.css';
 import apiService from '../apiService';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from 'react-modal';
-import './Modal.css';
 
 const api = new apiService();
 
@@ -68,7 +67,7 @@ render() {
     <div className="background">
       <div className="leftContent">
         <div className="title">Welcome to Top Pop!</div>
-        <div className="subtitle">These are the ten currently most popular songs on deezer:</div>
+        <div className="subtitle">These are the ten currently most popular songs on Deezer:</div>
           <div className="container list">
           {this.state.songsFetched && (
             <ul>
@@ -86,14 +85,14 @@ render() {
       <Modal className="sizeAndColor position" isOpen={this.state.showModal}>
         <div className="modalContent">
           <div className="modalTitle">SONG DETAILS</div>
-          <div className = "modalText">
+          <div className = "modalText container borderB">
           <div>Position: {this.state.position} </div>
           <div>Title: {this.state.title}</div>
           <div>Artist: {this.state.artist}</div>
           <div>Duration: {this.state.duration_mm}:{this.state.duration_ss}</div>
           </div>
         </div>
-        <button className="closeBtn btn btn-secondary" onClick={this.closeModal}>Close</button>
+        <button className="closeBtn btn btn-dark" onClick={this.closeModal}>Close</button>
       </Modal>
     </div>
   );

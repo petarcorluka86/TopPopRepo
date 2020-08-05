@@ -39,6 +39,47 @@
     min-height: 100%;
 }
 
+.sizeAndColor{
+
+    background-color: rgba(63, 167, 161, 0.378);
+    width: 20%;
+    height: 30%;
+}
+
+.position{
+    position: fixed;
+    left:40%;
+    top: 30%
+}
+
+.modalTitle{
+    font-size: 170%;
+    font-weight: 600;
+    text-align: right;
+    margin-right: 5%;
+    font-family: 'yikes' !important;
+}
+
+.borderB{
+    border: 1px solid black;
+    border-bottom: 0px !important;
+}
+.modalText{
+    font-size: 130%;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 5%;
+    font-family: 'yikes' !important;
+}
+
+.closeBtn{
+    float: right;
+    margin-right: 5%;
+    size: 70%;
+    margin-bottom: 5%;
+    font-family: 'yikes' !important;
+}
+
 ul {
     list-style-type: none;
 }
