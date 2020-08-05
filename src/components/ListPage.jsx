@@ -1,6 +1,7 @@
 import React from 'react';
 import './ListPage.css';
 import apiService from '../apiService';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const api = new apiService();
 
@@ -30,27 +31,29 @@ handleChange = (event) => {
 
 openSongInfo = async (event) => {
     event.preventDefault();
-    console.log("Stisni me! pritisnut");
     this.props.history.push('/songPage');
 };
 
 render() {
   return (
-    <div>
-        <div className="title">Top Pop!</div>
-        {this.state.songsFetched && (
-          <ul>
-          {this.state.listOfSongs.map(
-              (song) =>
-                <li key={song.id}> 
-                    <span className = "">
-                        <button onClick={()=>{this.props.history.push('/songPage/'+song.id)}}>{song.title}</button>
-                    </span>
-                </li> 
-            )
-          }
-        </ul>
-        )}
+    <div className="background">
+      <div className="leftContent">
+        <div className="title">Welcome to Top Pop!</div>
+        <div className="subtitle">These are the ten currently most popular songs on deezer:</div>
+          <div className="container list">
+          {this.state.songsFetched && (
+            <ul>
+            {this.state.listOfSongs.map(
+                (song) =>
+                  <li className="list" key={song.id}> 
+                          <button className="btn  btn-outline-secondary  blackTXT btn-block songBtn" onClick={()=>{this.props.history.push('/songPage/'+song.id)}}>{song.position+". "+song.title}</button>
+                  </li> 
+              )
+            }
+          </ul>
+          )}
+          </div>
+      </div>
     </div>
   );
 }

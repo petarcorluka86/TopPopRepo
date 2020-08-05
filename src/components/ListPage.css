@@ -1,3 +1,45 @@
 .title{
-    font-size: large;
+    text-align: center;
+    font-size: 350% !important;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 180% !important;
+}
+
+.list{
+    float: center;
+    text-align: center !important;
+    justify-content: center;
+}
+
+.songBtn{
+    color: black !important;
+    margin-top: 10px;
+    font-size: 120% !important;
+    font-weight: bolder;
+}
+
+.leftContent{
+    float: left; 
+    width: 50%;
+}
+
+
+.background{
+    background: url(../images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+ul {
+    list-style-type: none;
 }
