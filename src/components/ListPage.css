@@ -15,11 +15,38 @@
     margin-top: 2%;
 }
 
+.rightContent{
+    float:right;
+    width:50%;
+}
+
+.selectForm{
+    margin-left: 27%;
+    margin-top: 95px;
+    font-size: 120%;
+    font-weight: 480;
+}
+
+
+
 .songBtn{
     color: black !important;
     margin-top: 10px;
     font-size: 120% !important;
     font-weight: bolder;
+}
+
+.submBtn{
+    color: black !important;
+    margin-left: 10px;
+    border-color:  rgba(255, 255, 255, 0.0) !important;
+    background-color:  rgba(0, 0, 0, 0.1) !important;
+}
+
+.select{
+    color: black !important;
+    border-color:  rgba(255, 255, 255, 0.0) !important;
+    background-color:  rgba(0, 0, 0, 0.1) !important;
 }
 
 .leftContent{

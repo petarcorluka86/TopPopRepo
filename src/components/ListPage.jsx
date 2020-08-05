@@ -6,8 +6,9 @@ import Modal from 'react-modal';
 
 const api = new apiService();
 
-class ListPage extends React.Component {
 
+class ListPage extends React.Component {
+ 
 state = {
   listOfSongs: [],
   songsFetched: false,
@@ -18,7 +19,7 @@ state = {
   artist: undefined,
   duration: undefined,
   duration_mm: undefined,
-  duration_ss: undefined
+  duration_ss: undefined,
 };
 
 componentDidMount() {
@@ -35,7 +36,18 @@ callBack(){
 };
 
 handleChange = (event) => {
-  this.setState({ [event.target.name]: event.target.value });
+  if(event.target.value === "asc"){
+    var songs = this.state.listOfSongs.sort((a,b) => (parseInt(a.duration) > parseInt(b.duration)) ? 1 : ((parseInt(b.duration) > parseInt(a.duration)) ? -1 : 0));
+    this.setState({listOfSongs: songs})
+  }
+  else if (event.target.value === "desc"){
+    var songs = this.state.listOfSongs.sort((a,b) => (parseInt(a.duration) > parseInt(b.duration)) ? 1 : ((parseInt(b.duration) > parseInt(a.duration)) ? -1 : 0));
+    this.setState({listOfSongs: songs.reverse()})
+  }
+  else{
+    var songs = this.state.listOfSongs.sort((a,b) => (parseInt(a.position) > parseInt(b.position)) ? 1 : ((parseInt(b.position) > parseInt(a.position)) ? -1 : 0));
+    this.setState({listOfSongs: songs})
+  }
 };
 
 openSongInfo = async () => {
@@ -48,8 +60,8 @@ openSongInfo = async () => {
         title: song.title,
         artist: song.artist.name,
         duration: song.duration,
-        duration_mm: mm,
-        duration_ss: ss
+        duration_mm: ("0" + mm).slice(-2),
+        duration_ss: ("0" + ss).slice(-2)
       });
     }
   })
@@ -59,6 +71,7 @@ openSongInfo = async () => {
 closeModal = async () => {
   this.setState({showModal: false});
 }
+
 
 render() {
   return (
@@ -81,6 +94,18 @@ render() {
             </ul>
           )}
           </div>
+      </div>
+      <div className="rightContent">
+      
+        <label className="selectForm">
+          Sort by duration:
+          <select className="form-control select" placeholder="Select.." onChange={this.handleChange}>
+          <option className="select" value="-">-</option>
+            <option className="select" value="asc">ASC</option>
+            <option className="select" value="desc">DESC</option>
+          </select>
+        </label>
+      
       </div>
       <Modal className="sizeAndColor position" isOpen={this.state.showModal}>
         <div className="modalContent">
