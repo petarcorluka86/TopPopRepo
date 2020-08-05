@@ -23,8 +23,8 @@ state = {
 
 componentDidMount() {
   api.getSongs()
-    .then( (response) => {
-      this.setState({listOfSongs : response},this.callBack);
+    .then( (songs) => {
+      this.setState({listOfSongs : songs},this.callBack);
     });
 }
 
@@ -40,9 +40,7 @@ handleChange = (event) => {
 
 openSongInfo = async () => {
   this.state.listOfSongs.forEach((song)=>{
-    console.log("trazim pjesmu s idom:" + this.state.id)
     if (parseInt(song.id) === parseInt(this.state.songId)){
-      console.log("naso")
       const mm = Math.floor(song.duration / 60);
       const ss = song.duration % 60;
       this.setState({
@@ -52,7 +50,7 @@ openSongInfo = async () => {
         duration: song.duration,
         duration_mm: mm,
         duration_ss: ss
-      },this.callBack);
+      });
     }
   })
   this.setState({showModal: true});
@@ -74,11 +72,13 @@ render() {
             {this.state.listOfSongs.map(
                 (song) =>
                   <li className="list" key={song.id}> 
-                          <button className="btn  btn-outline-secondary  blackTXT btn-block songBtn" onClick={()=>{this.setState({songId: song.id},this.openSongInfo)}}>{song.position+". "+song.title}</button>
-                  </li> 
-              )
-            }
-          </ul>
+                    <button className="btn  btn-outline-secondary  blackTXT btn-block songBtn" onClick={()=>
+                      {this.setState({songId: song.id},this.openSongInfo)}}>
+                      {song.position+". "+song.title}
+                    </button>
+                  </li>
+            )}
+            </ul>
           )}
           </div>
       </div>

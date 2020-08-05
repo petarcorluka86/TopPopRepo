@@ -12,6 +12,7 @@
     float: center;
     text-align: center !important;
     justify-content: center;
+    margin-top: 2%;
 }
 
 .songBtn{
@@ -41,15 +42,15 @@
 
 .sizeAndColor{
 
-    background-color: rgba(63, 167, 161, 0.378);
-    width: 20%;
-    height: 30%;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40%;
+    height: 40%;
 }
 
 .position{
     position: fixed;
-    left:40%;
-    top: 30%
+    left:30%;
+    top: 25%
 }
 
 .modalTitle{
@@ -65,7 +66,7 @@
     border-bottom: 0px !important;
 }
 .modalText{
-    font-size: 130%;
+    font-size: 190%;
     font-weight: 500;
     text-align: left;
     margin-left: 5%;
@@ -75,8 +76,7 @@
 .closeBtn{
     float: right;
     margin-right: 5%;
-    size: 70%;
-    margin-bottom: 5%;
+    margin-bottom: 5% !important;
     font-family: 'yikes' !important;
 }
 
