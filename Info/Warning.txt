@@ -1,0 +1,8 @@
+You can experience errors related to making requests (even after setting the appropriate headers) for one of the following reasons:
+
+1) The URL is unreachable (e.g. the site is down, or they have blocked access to the CORS Anywhere IP).
+2) Too many requests have been sent to CORS Anywhere by the given origin within the given time frame.
+3) The URL itself is blacklisted.
+4) CORS Anywhere is down. (i.e. this is applicable if you are self hosting)
+
+You can swap commented and uncommmented 'getSongs' function in apiService.js for testing purposes.
