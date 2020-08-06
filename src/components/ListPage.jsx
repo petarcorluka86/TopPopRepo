@@ -37,16 +37,16 @@ callBack(){
 
 handleChange = (event) => {
   if(event.target.value === "asc"){
-    var songs = this.state.listOfSongs.sort((a,b) => (parseInt(a.duration) > parseInt(b.duration)) ? 1 : ((parseInt(b.duration) > parseInt(a.duration)) ? -1 : 0));
-    this.setState({listOfSongs: songs})
+    var songs1 = this.state.listOfSongs.sort((a,b) => (parseInt(a.duration) > parseInt(b.duration)) ? 1 : ((parseInt(b.duration) > parseInt(a.duration)) ? -1 : 0));
+    this.setState({listOfSongs: songs1})
   }
   else if (event.target.value === "desc"){
-    var songs = this.state.listOfSongs.sort((a,b) => (parseInt(a.duration) > parseInt(b.duration)) ? 1 : ((parseInt(b.duration) > parseInt(a.duration)) ? -1 : 0));
-    this.setState({listOfSongs: songs.reverse()})
+    var songs2 = this.state.listOfSongs.sort((a,b) => (parseInt(a.duration) > parseInt(b.duration)) ? 1 : ((parseInt(b.duration) > parseInt(a.duration)) ? -1 : 0));
+    this.setState({listOfSongs: songs2.reverse()})
   }
   else{
-    var songs = this.state.listOfSongs.sort((a,b) => (parseInt(a.position) > parseInt(b.position)) ? 1 : ((parseInt(b.position) > parseInt(a.position)) ? -1 : 0));
-    this.setState({listOfSongs: songs})
+    var songs3 = this.state.listOfSongs.sort((a,b) => (parseInt(a.position) > parseInt(b.position)) ? 1 : ((parseInt(b.position) > parseInt(a.position)) ? -1 : 0));
+    this.setState({listOfSongs: songs3})
   }
 };
 
