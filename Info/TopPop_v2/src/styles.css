@@ -1,0 +1,97 @@
+.background{
+    background: url(./images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.left-content{
+    float: left; 
+    width: 50%;
+}
+
+.right-content{
+    float:right;
+    width:50%;
+}
+
+.title{
+    text-align: center;
+    font-size: 350% !important;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 180% !important;
+}
+
+.list{
+    float: center;
+    text-align: center !important;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.song-btn{
+    color: black !important;
+    margin-top: 10px;
+    font-size: 120% !important;
+    font-weight: bolder;
+}
+
+.select-form{
+    margin-left: 27%;
+    margin-top: 95px;
+    font-size: 120%;
+    font-weight: 480;
+}
+
+.select{
+    color: black !important;
+    border-color:  rgba(255, 255, 255, 0.0) !important;
+    background-color:  rgba(0, 0, 0, 0.1) !important;
+}
+
+.my-modal{
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 40%;
+    height: 40%;
+    position: fixed;
+    left:30%;
+    top: 25%
+}
+
+.modal-title{
+    font-size: 170%;
+    font-weight: 600;
+    text-align: right;
+    margin-right: 5%;
+    font-family: 'yikes' !important;
+}
+
+.modal-text{
+    font-size: 190%;
+    font-weight: 500;
+    text-align: left;
+    margin-left: 5%;
+    border: 1px solid black;
+    border-bottom: 0px !important;
+    font-family: 'yikes' !important;
+}
+
+.close-btn{
+    float: right;
+    margin-right: 5%;
+    margin-bottom: 5% !important;
+    font-family: 'yikes' !important;
+}
+
+ul {
+    list-style-type: none;
+}
