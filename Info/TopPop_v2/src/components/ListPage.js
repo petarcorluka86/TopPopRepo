@@ -7,24 +7,19 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 const api = new apiService()
 
 class ListPage extends React.Component {
-
-  constructor() {
-    super()
-    this.state = {
-      listOfSongs: [],
-      songsFetched: false,
-      showModal: false,
-      songId: undefined,
-      theSong: {
-        id: undefined,
-        position: undefined,
-        title: undefined,
-        artist: undefined,
-        duration: undefined
-      }
+    
+  state = {
+    listOfSongs: [],
+    songsFetched: false,
+    showModal: false,
+    songId: undefined,
+    theSong: {
+      id: undefined,
+      position: undefined,
+      title: undefined,
+      artist: undefined,
+      duration: undefined
     }
-    this.closeModal = this.closeModal.bind(this)
-    this.openSongInfo = this.openSongInfo.bind(this)
   }
 
   componentDidMount() {
@@ -69,7 +64,7 @@ class ListPage extends React.Component {
     })
   }
 
-  closeModal() {
+  closeModal = () => {
     this.setState({showModal: false})
   }
 
