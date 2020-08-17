@@ -1,7 +1,8 @@
 import React from 'react'
 import Modal from 'react-modal'
 
-function SongInfo(props) { 
+function SongInfo(props) {
+    Modal.setAppElement('body');
     return (
         <Modal className="my-modal" isOpen={props.showModal}>
             <div className="modal-title">SONG DETAILS</div>

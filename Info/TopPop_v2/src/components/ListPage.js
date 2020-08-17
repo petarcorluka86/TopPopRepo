@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import apiService from '../apiService'
 import SongInfo from './SongInfo'
 import '../styles.css'
@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const api = new apiService()
 
-class ListPage extends React.Component {
+class ListPage extends Component {
     
   state = {
     listOfSongs: [],
